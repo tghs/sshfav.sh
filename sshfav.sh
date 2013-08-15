@@ -1,5 +1,5 @@
 #!/bin/bash
-# sshfav.sh 1.0
+# sshfav.sh 1.1
 # Tim Sheridan <tghs@tghs.net> http://timsheridan.org/
 # Public domain/copyright-free
 
