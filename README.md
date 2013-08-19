@@ -1,6 +1,6 @@
 # sshfav.sh
 
-[http://timsheridan.org/project/sshfav.sh](Project page)
+[sshfav.sh project page](http://timsheridan.org/project/sshfav.sh)
 
 A shell script for connecting to your favourite SSH locations easily.
 
@@ -27,4 +27,4 @@ Name the wrapper script file using the user@host pattern, chmod +x it and set it
 
 I keep all of mine in a directory that I have in my Dock.
 
-[Screenshot of ](http://timsheridan.org/asset/image/sshfav_osx.png)
+![Screenshot of SSH bookmarks in the Dock on Mac OS X](http://timsheridan.org/asset/image/sshfav_osx.png)
