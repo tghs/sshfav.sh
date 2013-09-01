@@ -56,9 +56,9 @@ main() {
 	fi
 	
 	# Extract strings from symlink
-	SSH_HOST="`host_from_connection_spec '$INVOKE_NAME'`"
-	SSH_USER="`user_from_connection_spec '$INVOKE_NAME'`"
-	SSH_PORT="`port_from_connection_spec '$INVOKE_NAME'`"
+	SSH_HOST="`host_from_connection_spec \"$INVOKE_NAME\"`"
+	SSH_USER="`user_from_connection_spec \"$INVOKE_NAME\"`"
+	SSH_PORT="`port_from_connection_spec \"$INVOKE_NAME\"`"
 	
 	# Set remote username to local username if none was provided
 	while [ "$SSH_USER" == "" ]; do
