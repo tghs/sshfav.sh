@@ -13,6 +13,9 @@ set -eu
 
 main() {
 	if [ $# -gt 0 ]; then
+		if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+			return 0
+		fi
 		INVOKE_NAME="$1"
 	else
 		INVOKE_NAME=$(basename `echo $0`)
