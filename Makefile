@@ -3,4 +3,4 @@ all:
 
 .PHONY: test
 test:
-	./test.sh
+	@./test.sh
