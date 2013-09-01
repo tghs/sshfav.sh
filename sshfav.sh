@@ -11,6 +11,43 @@
 
 set -eu
 
+DEFAULT_PORT="22"
+
+SSH_PORT="${SSH_HOST#*:}"
+SSH_HOST="${SSH_HOST%:*}"
+
+host_from_connection_spec() {
+	CONNECTION_SPEC="$1"
+	POTENTIAL_HOST="${CONNECTION_SPEC#*@}"
+	POTENTIAL_HOST="${POTENTIAL_HOST%:*}"
+	HOST="$POTENTIAL_HOST"
+	echo "$HOST"
+}
+
+user_from_connection_spec() {
+	CONNECTION_SPEC="$1"
+	POTENTIAL_USER="${CONNECTION_SPEC%@*}"
+	if [ "$POTENTIAL_USER" == "$CONNECTION_SPEC" ]; then
+		# No user specified
+		USER=""
+	else
+		USER="$POTENTIAL_USER"
+	fi
+	echo "$USER"
+}
+
+port_from_connection_spec() {
+	CONNECTION_SPEC="$1"
+	POTENTIAL_PORT="${CONNECTION_SPEC#*:}"
+	if [ "$POTENTIAL_PORT" == "$CONNECTION_SPEC" ]; then
+		# No port specified
+		PORT="$DEFAULT_PORT"
+	else
+		PORT="$POTENTIAL_PORT"
+	fi
+	echo "$PORT"
+}
+
 main() {
 	if [ $# -gt 0 ]; then
 		if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
@@ -22,13 +59,9 @@ main() {
 	fi
 	
 	# Extract strings from symlink
-	SSH_HOST="${INVOKE_NAME#*@}"
-	SSH_USER="${INVOKE_NAME%@*}"
-	SSH_PORT="${SSH_HOST#*:}"
-	SSH_HOST="${SSH_HOST%:*}"
-	if [ "$SSH_PORT" == "$SSH_HOST" ]; then
-	    SSH_PORT="22"
-	fi
+	SSH_HOST="`host_from_connection_spec '$INVOKE_NAME'`"
+	SSH_USER="`user_from_connection_spec '$INVOKE_NAME'`"
+	SSH_PORT="`port_from_connection_spec '$INVOKE_NAME'`"
 	
 	# Set remote username to local username if none was provided
 	while [ "$SSH_USER" == "$SSH_HOST" ] || [ "$SSH_USER" == "" ]; do
