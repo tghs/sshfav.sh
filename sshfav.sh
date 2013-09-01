@@ -13,9 +13,6 @@ set -eu
 
 DEFAULT_PORT="22"
 
-SSH_PORT="${SSH_HOST#*:}"
-SSH_HOST="${SSH_HOST%:*}"
-
 host_from_connection_spec() {
 	CONNECTION_SPEC="$1"
 	POTENTIAL_HOST="${CONNECTION_SPEC#*@}"
