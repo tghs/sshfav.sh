@@ -64,7 +64,7 @@ main() {
 	SSH_PORT="`port_from_connection_spec '$INVOKE_NAME'`"
 	
 	# Set remote username to local username if none was provided
-	while [ "$SSH_USER" == "$SSH_HOST" ] || [ "$SSH_USER" == "" ]; do
+	while [ "$SSH_USER" == "" ]; do
 	    read -p "User: " SSH_USER
 	done
 	
