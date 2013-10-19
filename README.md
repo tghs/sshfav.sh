@@ -4,7 +4,7 @@
 
 A shell script for connecting to your favourite SSH locations easily.
 
-Make symlinks to sshfav.sh using filenames of the form 'user@host' and execute them. If only a hostname is provided, you will be prompted for a user each time you run it.
+Make symlinks to sshfav.sh using filenames of the form '[user@]host[:port]' and execute them. If a username is omitted, you will be prompted for a user each time you run it. If no port is specified, port 22 will be used.
 
 If the symlink is installed into your PATH, then you'll be able to use it by executing it in a shell:
 
