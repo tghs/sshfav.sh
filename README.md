@@ -25,7 +25,7 @@ If you want to be able to launch these SSH favourites from Mac OS X's GUI, the w
 sshfav.sh `basename $0`
 ```
 
-Name the wrapper script file using the 'user@host' pattern, chmod +x it and set it to open in Termainal.app (it's under 'Get Info' for the file). Afterwards, just copying an SSH favourite and renaming it will work perfectly.
+Name the wrapper script file using the '[user@]host[:port]' pattern. Finder.app interprets ':'s in filenames as '/'s, so if you're not naming the file in a shell, you should use this character instead. chmod +x it and set it to open in Termainal.app (it's under 'Get Info' for the file). Afterwards, just copying an SSH favourite and renaming it will work perfectly.
 
 I keep all of mine in a directory that I have in my Dock.
 
