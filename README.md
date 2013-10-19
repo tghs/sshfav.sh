@@ -30,3 +30,11 @@ Name the wrapper script file using the '[user@]host[:port]' pattern. Finder.app 
 I keep all of mine in a directory that I have in my Dock.
 
 ![Screenshot of SSH bookmarks in the Dock on Mac OS X](http://timsheridan.org/asset/image/sshfav_osx.png)
+
+## Development
+
+Run unit tests using the following command:
+
+```
+make test
+```
