@@ -29,7 +29,7 @@ Name the wrapper script file using the '[user@]host[:port]' pattern. Finder.app 
 
 I keep all of mine in a directory that I have in my Dock.
 
-![Screenshot of SSH bookmarks in the Dock on Mac OS X](http://timsheridan.org/asset/image/sshfav_1.2_osx.png)
+<img src="http://timsheridan.org/asset/image/sshfav_1.2_osx.png" width="314px" alt="Screenshot of SSH bookmarks in the Dock on Mac OS X">
 
 ## Development
 
