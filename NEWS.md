@@ -1,3 +1,6 @@
+## 1.2.1
+* Fix Mac OS X wrapper script to handle spaces path.
+
 ## 1.2
 * Add unit tests.
 * Add optional port number to connection specifications.
