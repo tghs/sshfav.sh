@@ -20,7 +20,7 @@ Password:
 
 If you want to be able to launch these SSH favourites from Mac OS X's GUI, the way that the Finder resolves symbolic and hard links means that you have to either have multiple copies of sshfav.sh or use a wrapper script which you duplicate for each of your SSH connections. This wrapper script looks like this (if you've put sshfav.sh in your PATH):
 
-```
+```sh
 #!/bin/sh
 sshfav.sh `basename "$0"`
 ```
