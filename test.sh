@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Initialise test framework
+# Initialize test framework
 
 TEST_FAILURES=0
 
