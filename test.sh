@@ -58,5 +58,3 @@ if [ $TEST_FAILURES -eq 0 ]; then
 else
 	exit 1
 fi
-
-#eof
