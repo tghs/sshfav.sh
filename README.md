@@ -1,6 +1,6 @@
 # sshfav.sh
 
-[sshfav.sh project page](http://timsheridan.org/project/sshfav.sh)
+[sshfav.sh project page](https://timsheridan.org/project/sshfav.sh)
 
 A shell script for connecting to your favourite SSH locations easily.
 
